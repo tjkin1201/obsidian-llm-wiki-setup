@@ -10,7 +10,7 @@ Replicate this Obsidian setup: Karpathy's **LLM Wiki pattern** + PARA folders + 
 ```
 obsidian-llm-wiki-setup/
 ├── README.md / README.en.md   # this guide (KO / EN)
-├── GUIDE.md                    # full setup guide (folders, plugins, workflow, checklist) — Korean
+├── GUIDE.md / GUIDE.en.md      # full setup guide (folders, plugins, workflow, checklist) — KO / EN
 ├── plugins.txt                 # 31 community plugin IDs (one per line)
 └── .obsidian/
     ├── community-plugins.json  # enabled community plugins
@@ -51,7 +51,7 @@ Copy the `.obsidian/` json files from this bundle into your new vault's `.obsidi
 Settings → Appearance → Themes → install **Blue Topaz**. Put the 2 css files from `snippets/` into your vault's `.obsidian/snippets/` and enable them.
 
 ### 5) Folders + LLM Wiki
-Follow the "복제 체크리스트" (replication checklist) in `GUIDE.md` — 9 steps (folders → LLM Wiki CLAUDE.md → CLI tools → first cycle).
+Follow the "Replication checklist" in [`GUIDE.en.md`](./GUIDE.en.md) — 9 steps (folders → LLM Wiki CLAUDE.md → CLI tools → first cycle).
 
 ### 6) CLI tools (optional, for the AI workflow)
 ```bash

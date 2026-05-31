@@ -12,6 +12,8 @@ aliases: [옵시디언 셋업 가이드, Obsidian Setup Share]
 
 # Obsidian LLM Wiki 셋업 공유 가이드
 
+🌏 **한국어** · [English](./GUIDE.en.md)
+
 > 이 문서 하나로 내 Obsidian 셋업(플러그인 + 설정 + 폴더 구조 + AI 워크플로우)을 **누구나 동일하게 복제**할 수 있다. 복사해서 공유 가능.
 
 ## 정의 (한 줄)
