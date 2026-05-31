@@ -1,5 +1,7 @@
 # Obsidian LLM Wiki 셋업 — 공유용 설정 번들
 
+🌏 **한국어** · [English](./README.en.md)
+
 Karpathy **LLM Wiki 패턴** + PARA 폴더 + Claude Code 연동 Obsidian 셋업을 그대로 복제하는 번들입니다.
 **비밀(API 키·토큰·개인 워크스페이스)은 모두 제외**했습니다. 안전하게 공유 가능합니다.
 
