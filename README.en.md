@@ -90,6 +90,10 @@ npm install -g "@tobilu/qmd"
 
 > Key discipline **Gold In, Gold Out**: only ingest what you noted a *purpose* for. No-intent data is noise.
 
+## 📖 More
+- **Per-plugin reference (31, what·why·how)** → [PLUGINS.en.md](./PLUGINS.en.md)
+- Full setup & workflow → [GUIDE.en.md](./GUIDE.en.md)
+
 ## 🖥 OS notes (macOS · Windows · Linux)
 
 Obsidian, plugins, themes, and `.obsidian/*.json` are **identical across all three OSes**. Only these differ:

@@ -77,7 +77,8 @@ npm install -g "@tobilu/qmd"
 > NotebookLM 연동은 `nlm` (선택, 모든 OS 동일).
 
 ## 📖 자세한 설명
-→ `GUIDE.md` 참조 (플러그인 32개 카테고리별 용도, 수집→정리→질의→점검→시각화 워크플로우, Gold In Gold Out 규율).
+- **플러그인 31개 개별 설명**(무엇·왜·어떻게) → [PLUGINS.md](./PLUGINS.md)
+- 전체 셋업·워크플로우 → `GUIDE.md` 참조 (플러그인 32개 카테고리별 용도, 수집→정리→질의→점검→시각화 워크플로우, Gold In Gold Out 규율).
 
 ## 🖥 OS별 참고 (macOS · Windows · Linux)
 
