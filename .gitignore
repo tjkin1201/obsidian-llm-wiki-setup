@@ -1,0 +1,37 @@
+# ─── 비밀·개인정보 보호 (절대 커밋 금지) ───
+# 플러그인별 설정에 API 키·토큰이 들어있을 수 있음
+.obsidian/plugins/*/data.json
+.obsidian/plugins/
+# 개인 워크스페이스·레이아웃·열어둔 파일 경로
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+# 에이전트/외부연동 비밀
+.obsidian/hermes/
+.obsidian/local-rest-api*
+# 개인 데이터 (그래프 좌표·북마크 경로)
+.obsidian/graph.json
+.obsidian/bookmarks.json
+.obsidian/page-preview.json
+.obsidian/backlink.json
+.obsidian/switcher.json
+
+# ─── 환경/비밀 일반 ───
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+*credentials*
+
+# ─── OS·에디터 ───
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# ─── 주의 ───
+# 이 레포에 포함된 .obsidian/*.json (community-plugins, core-plugins, appearance,
+# app, daily-notes, types)와 snippets/는 비밀이 없어 의도적으로 추적됩니다.
+# 자기 vault의 전체 .obsidian/를 복사해 넣을 땐 위 규칙이 비밀 파일을 자동 제외합니다.

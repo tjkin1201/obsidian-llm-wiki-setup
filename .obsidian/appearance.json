@@ -1,0 +1,8 @@
+{
+  "theme": "obsidian",
+  "cssTheme": "Blue Topaz",
+  "enabledCssSnippets": [
+    "multi-column-callout",
+    "cute-vibes"
+  ]
+}

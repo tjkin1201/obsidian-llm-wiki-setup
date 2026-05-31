@@ -1,0 +1,332 @@
+/* ============================================================
+   🌸 Cute Vibes — Pastel Pink + Lavender Overlay for Blue Topaz
+   ============================================================ */
+
+/* ---- 1. 컬러 팔레트 (CSS 변수 재정의) ---- */
+.theme-light body,
+.theme-light {
+  --cute-bg:           #FFF5F7;
+  --cute-bg-alt:       #FBEAF2;
+  --cute-surface:      #FFFFFF;
+  --cute-peach:        #FFD1DC;
+  --cute-pink:         #F5B8E0;
+  --cute-pink-strong:  #E891C4;
+  --cute-lavender:     #C8A2E0;
+  --cute-lavender-soft:#E5D4F2;
+  --cute-mint:         #B5EAD7;
+  --cute-text:         #4A3850;
+  --cute-text-muted:   #8B7A95;
+  --cute-border:       #F0DCEE;
+  --cute-shadow:       0 6px 18px rgba(200, 162, 224, 0.18);
+  --cute-shadow-soft:  0 2px 8px rgba(245, 184, 224, 0.15);
+
+  --background-primary:        var(--cute-bg);
+  --background-primary-alt:    var(--cute-bg-alt);
+  --background-secondary:      var(--cute-bg-alt);
+  --background-secondary-alt:  var(--cute-surface);
+  --background-modifier-border:var(--cute-border);
+  --background-modifier-hover: var(--cute-lavender-soft);
+
+  --text-normal:    var(--cute-text);
+  --text-muted:     var(--cute-text-muted);
+  --text-accent:    var(--cute-lavender);
+  --text-accent-hover: var(--cute-pink-strong);
+  --interactive-accent:      var(--cute-pink);
+  --interactive-accent-hover:var(--cute-pink-strong);
+  --link-color:     var(--cute-lavender);
+  --link-color-hover: var(--cute-pink-strong);
+}
+
+.theme-dark body,
+.theme-dark {
+  --cute-bg:           #221825;
+  --cute-bg-alt:       #2C1F33;
+  --cute-surface:      #382848;
+  --cute-peach:        #FF9BC2;
+  --cute-pink:         #FF6BCB;
+  --cute-pink-strong:  #FF89D9;
+  --cute-lavender:     #B49AE5;
+  --cute-lavender-soft:#5A4373;
+  --cute-mint:         #7FE3C2;
+  --cute-text:         #F0E5F5;
+  --cute-text-muted:   #B49DC4;
+  --cute-border:       #5A4373;
+  --cute-shadow:       0 6px 20px rgba(255, 107, 203, 0.20);
+  --cute-shadow-soft:  0 2px 10px rgba(180, 154, 229, 0.18);
+
+  --background-primary:        var(--cute-bg);
+  --background-primary-alt:    var(--cute-bg-alt);
+  --background-secondary:      var(--cute-bg-alt);
+  --background-secondary-alt:  var(--cute-surface);
+  --background-modifier-border:var(--cute-border);
+  --background-modifier-hover: var(--cute-lavender-soft);
+
+  --text-normal:    var(--cute-text);
+  --text-muted:     var(--cute-text-muted);
+  --text-accent:    var(--cute-pink);
+  --text-accent-hover: var(--cute-peach);
+  --interactive-accent:      var(--cute-pink);
+  --interactive-accent-hover:var(--cute-pink-strong);
+  --link-color:     var(--cute-pink);
+  --link-color-hover: var(--cute-peach);
+}
+
+/* ---- 2. 둥근 모서리 & 부드러운 그림자 ---- */
+body {
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-xl: 22px;
+  font-feature-settings: "palt", "ss01";
+}
+
+.workspace-leaf,
+.workspace-tabs,
+.workspace-tab-header,
+.modal,
+.suggestion-container,
+.menu,
+.tooltip {
+  border-radius: var(--radius-l) !important;
+}
+
+.workspace-leaf-content {
+  border-radius: var(--radius-l);
+}
+
+/* ---- 3. 사이드바 = 라운드 카드 느낌 ---- */
+.workspace-ribbon,
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  background: linear-gradient(160deg, var(--cute-bg) 0%, var(--cute-bg-alt) 100%);
+}
+
+.nav-file-title,
+.nav-folder-title {
+  border-radius: 10px !important;
+  margin: 2px 4px;
+  /* transition: all → 접기/펼치기 시 위치 변화까지 애니메이션되어 밀림 유발. 색상만 transition */
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background: var(--cute-lavender-soft) !important;
+  /* transform: translateX(2px);  폴더 클릭 시 아이콘 오른쪽 쉬프트 유발하여 비활성화 */
+}
+.nav-file-title.is-active {
+  background: linear-gradient(90deg, var(--cute-pink) 0%, var(--cute-lavender) 100%) !important;
+  color: white !important;
+  box-shadow: var(--cute-shadow-soft);
+}
+
+/* ---- 4. 헤딩 — 귀여운 강조 ---- */
+.markdown-rendered h1,
+.cm-header-1 {
+  color: var(--cute-pink-strong) !important;
+  border-bottom: 3px dashed var(--cute-pink) !important;
+  padding-bottom: 8px;
+}
+.markdown-rendered h2,
+.cm-header-2 {
+  color: var(--cute-lavender) !important;
+  position: relative;
+  padding-left: 24px;
+}
+.markdown-rendered h2::before {
+  content: "🌸 ";
+  position: absolute;
+  left: 0;
+  filter: drop-shadow(0 1px 2px rgba(245, 184, 224, 0.4));
+}
+.markdown-rendered h3 {
+  color: var(--cute-pink-strong) !important;
+}
+.markdown-rendered h3::before {
+  content: "🎀 ";
+}
+
+/* ---- 5. 콜아웃 — 폭신폭신 라운드 카드 ---- */
+.callout {
+  border-radius: var(--radius-l) !important;
+  border: none !important;
+  box-shadow: var(--cute-shadow-soft);
+  padding: 14px 18px !important;
+  margin: 12px 0;
+  background: var(--cute-surface) !important;
+}
+.callout[data-callout="note"]     { border-left: 4px solid var(--cute-lavender) !important; }
+.callout[data-callout="tip"],
+.callout[data-callout="hint"]     { border-left: 4px solid var(--cute-mint) !important; }
+.callout[data-callout="important"]{ border-left: 4px solid var(--cute-pink) !important; }
+.callout[data-callout="warning"]  { border-left: 4px solid var(--cute-peach) !important; }
+.callout[data-callout="quote"]    { border-left: 4px solid var(--cute-lavender) !important; font-style: italic; }
+
+/* ---- 6. 체크박스 — 동그란 핑크 ---- */
+input[type="checkbox"] {
+  border-radius: 50% !important;
+  border: 2px solid var(--cute-pink) !important;
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s ease;
+}
+input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, var(--cute-pink) 0%, var(--cute-lavender) 100%) !important;
+  box-shadow: 0 0 0 3px var(--cute-lavender-soft);
+}
+
+/* ---- 7. 태그 — 알약(pill) 모양 ---- */
+.tag,
+a.tag {
+  background: linear-gradient(135deg, var(--cute-lavender-soft) 0%, var(--cute-pink) 100%) !important;
+  color: var(--cute-text) !important;
+  border-radius: 999px !important;
+  padding: 2px 12px !important;
+  border: none !important;
+  font-size: 0.85em;
+  font-weight: 500;
+  box-shadow: var(--cute-shadow-soft);
+}
+.tag:hover {
+  transform: translateY(-1px) scale(1.04);
+  transition: all 0.18s ease;
+}
+
+/* ---- 8. 내부 링크 — 부드러운 밑줄 ---- */
+.internal-link {
+  text-decoration: none !important;
+  background-image: linear-gradient(transparent 92%, var(--cute-pink) 92%);
+  padding-bottom: 1px;
+  transition: all 0.2s ease;
+}
+.internal-link:hover {
+  background-image: linear-gradient(transparent 80%, var(--cute-peach) 80%);
+  color: var(--cute-pink-strong) !important;
+}
+
+/* ---- 9. 코드 블록 — 라운드 + 핑크 보더 ---- */
+.markdown-rendered pre,
+.HyperMD-codeblock {
+  border-radius: var(--radius-m) !important;
+  border: 1px solid var(--cute-border) !important;
+  box-shadow: var(--cute-shadow-soft);
+}
+.markdown-rendered code:not(pre code) {
+  background: var(--cute-lavender-soft) !important;
+  color: var(--cute-pink-strong) !important;
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+  font-size: 0.92em;
+}
+
+/* ---- 10. 테이블 — 줄무늬 + 라운드 ---- */
+.markdown-rendered table {
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  box-shadow: var(--cute-shadow-soft);
+}
+.markdown-rendered thead th {
+  background: linear-gradient(135deg, var(--cute-pink) 0%, var(--cute-lavender) 100%) !important;
+  color: white !important;
+  border: none !important;
+}
+.markdown-rendered tbody tr:nth-child(even) {
+  background: var(--cute-lavender-soft);
+}
+
+/* ---- 11. 버튼 — 풍선 같은 ---- */
+button:not(.clickable-icon):not(.suggestion-item) {
+  border-radius: var(--radius-m) !important;
+  background: linear-gradient(135deg, var(--cute-pink) 0%, var(--cute-lavender) 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: var(--cute-shadow-soft);
+  transition: all 0.18s ease;
+}
+button:not(.clickable-icon):not(.suggestion-item):hover {
+  transform: translateY(-2px);
+  box-shadow: var(--cute-shadow);
+}
+
+/* ---- 12. Canvas 카드 — 라운드 ---- */
+.canvas-node {
+  border-radius: var(--radius-l) !important;
+  box-shadow: var(--cute-shadow);
+  border: 2px solid var(--cute-border) !important;
+}
+
+/* ---- 13. Tab Bar — 폭신한 탭 ---- */
+.workspace-tab-header.is-active {
+  background: linear-gradient(135deg, var(--cute-pink) 0%, var(--cute-lavender) 100%) !important;
+  color: white !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+.workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: white !important;
+}
+
+/* ---- 14. Status Bar — 미니멀 ---- */
+.status-bar {
+  background: var(--cute-bg-alt) !important;
+  border-top: 1px solid var(--cute-border) !important;
+  border-radius: 12px 12px 0 0;
+}
+
+/* ---- 15. 인용구(blockquote) — 분홍 보더 + 따옴표 장식 ---- */
+.markdown-rendered blockquote {
+  border-left: 4px solid var(--cute-pink) !important;
+  background: var(--cute-lavender-soft);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  padding: 10px 16px !important;
+  position: relative;
+  font-style: italic;
+}
+
+/* ---- 16. Homepage 대시보드 카드 클래스 ---- */
+.cute-card {
+  background: var(--cute-surface);
+  border-radius: var(--radius-l);
+  padding: 18px 22px;
+  box-shadow: var(--cute-shadow-soft);
+  border: 1px solid var(--cute-border);
+  margin: 12px 0;
+}
+.cute-card:hover {
+  box-shadow: var(--cute-shadow);
+  transform: translateY(-2px);
+  transition: all 0.22s ease;
+}
+
+/* ---- 17. 스크롤바 — 핑크 ---- */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--cute-pink) 0%, var(--cute-lavender) 100%) !important;
+  border-radius: 999px !important;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* ---- 18. 폴더 아이콘이 있는 경우 살짝 키우기 ---- */
+.obsidian-icon-folder-icon svg {
+  filter: drop-shadow(0 1px 2px rgba(245, 184, 224, 0.5));
+}
+
+/* ---- 19. Properties (frontmatter UI) — 카드 ---- */
+.metadata-container {
+  background: var(--cute-bg-alt) !important;
+  border-radius: var(--radius-m) !important;
+  padding: 12px !important;
+  box-shadow: var(--cute-shadow-soft);
+}
+
+/* ---- 20. 모달(검색 등) — 폭신 ---- */
+.modal {
+  box-shadow: 0 20px 60px rgba(200, 162, 224, 0.4) !important;
+  border: 1px solid var(--cute-border) !important;
+}
+.modal-title {
+  color: var(--cute-pink-strong) !important;
+  font-weight: 700;
+}

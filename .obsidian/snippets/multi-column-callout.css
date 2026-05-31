@@ -1,0 +1,173 @@
+/* ============================================
+   Multi-Column Callout Layout for Obsidian
+   Based on efemkay's Modular CSS Layout
+   Adapted for tjkim Knowledge Engine Vault
+   ============================================ */
+
+/* --- [!multi-column] Parent Container --- */
+.callout[data-callout="multi-column"] {
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.callout[data-callout="multi-column"] > .callout-title {
+  display: none;
+}
+
+.callout[data-callout="multi-column"] > .callout-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+}
+
+.callout[data-callout="multi-column"] > .callout-content > .callout {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+/* --- Fixed Width Variants --- */
+.callout[data-callout="multi-column"][data-callout-metadata*="center-fixed"] > .callout-content {
+  justify-content: center;
+}
+
+.callout[data-callout="multi-column"][data-callout-metadata*="no-wrap"] > .callout-content {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+/* --- Width Modifiers for Sub-Callouts --- */
+.callout[data-callout-metadata*="wide-2"] {
+  flex: 2 1 500px !important;
+}
+
+.callout[data-callout-metadata*="wide-3"] {
+  flex: 3 1 750px !important;
+}
+
+/* --- [!grid] 2-Column Grid Layout --- */
+.callout[data-callout="grid"] {
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.callout[data-callout="grid"] > .callout-title {
+  display: none;
+}
+
+.callout[data-callout="grid"] > .callout-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0;
+}
+
+.callout[data-callout="grid"] > .callout-content > .callout {
+  margin: 0;
+}
+
+/* --- [!stat-card] Compact Stat Card --- */
+.callout[data-callout="stat-card"] {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border-left-width: 4px;
+}
+
+.callout[data-callout="stat-card"] .callout-title {
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+
+.callout[data-callout="stat-card"] .callout-content {
+  padding: 0;
+}
+
+.callout[data-callout="stat-card"] .callout-content p {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* --- Category-Specific Callout Colors --- */
+
+/* AI - Purple */
+.ai-note .callout:not([data-callout="multi-column"]):not([data-callout="grid"]) {
+  --callout-color: 147, 51, 234;
+}
+
+/* Stock - Green */
+.stock-note .callout:not([data-callout="multi-column"]):not([data-callout="grid"]) {
+  --callout-color: 34, 197, 94;
+}
+
+/* Culture - Pink */
+.culture-note .callout:not([data-callout="multi-column"]):not([data-callout="grid"]) {
+  --callout-color: 236, 72, 153;
+}
+
+/* Computer - Blue */
+.computer-note .callout:not([data-callout="multi-column"]):not([data-callout="grid"]) {
+  --callout-color: 59, 130, 246;
+}
+
+/* Photo - Amber */
+.photo-note .callout:not([data-callout="multi-column"]):not([data-callout="grid"]) {
+  --callout-color: 245, 158, 11;
+}
+
+/* Briefing - Lavender */
+.briefing-note .callout:not([data-callout="multi-column"]):not([data-callout="grid"]) {
+  --callout-color: 139, 92, 246;
+}
+
+/* Insight - Cyan */
+.insight-note .callout:not([data-callout="multi-column"]):not([data-callout="grid"]) {
+  --callout-color: 6, 182, 212;
+}
+
+/* Weekly Review - Indigo */
+.weekly-note .callout:not([data-callout="multi-column"]):not([data-callout="grid"]) {
+  --callout-color: 99, 102, 241;
+}
+
+/* --- Enhanced Table Styling --- */
+.ai-note table, .stock-note table, .culture-note table,
+.computer-note table, .photo-note table, .briefing-note table,
+.insight-note table, .weekly-note table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.ai-note th { background-color: rgba(147, 51, 234, 0.1); }
+.stock-note th { background-color: rgba(34, 197, 94, 0.1); }
+.culture-note th { background-color: rgba(236, 72, 153, 0.1); }
+.computer-note th { background-color: rgba(59, 130, 246, 0.1); }
+.photo-note th { background-color: rgba(245, 158, 11, 0.1); }
+.briefing-note th { background-color: rgba(139, 92, 246, 0.1); }
+
+/* --- Priority Badge Styling --- */
+.callout[data-callout="danger"] {
+  border-left-color: rgb(239, 68, 68) !important;
+}
+.callout[data-callout="warning"] {
+  border-left-color: rgb(234, 179, 8) !important;
+}
+.callout[data-callout="tip"] {
+  border-left-color: rgb(34, 197, 94) !important;
+}
+
+/* --- Responsive: Stack on narrow screens --- */
+@media (max-width: 600px) {
+  .callout[data-callout="multi-column"] > .callout-content,
+  .callout[data-callout="grid"] > .callout-content {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+}

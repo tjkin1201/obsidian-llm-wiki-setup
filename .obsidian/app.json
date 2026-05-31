@@ -1,0 +1,25 @@
+{
+  "promptDelete": false,
+  "showLineNumber": true,
+  "trashOption": "local",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "00_Meta/Files",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00_Meta/Inbox",
+  "userIgnoreFilters": [
+    "06_Archive/",
+    ".trio_backup_",
+    "__pycache__/",
+    "copilot/",
+    "node_modules/",
+    "venv/"
+  ],
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}
