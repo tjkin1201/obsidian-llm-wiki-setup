@@ -132,7 +132,7 @@ CLI tools outside Obsidian run together with the plugins:
 4. **Theme** install Blue Topaz + apply the 2 CSS snippets
 5. **Core settings** per E (attachment folder, new note location, search excludes)
 6. **LLM Wiki schema**: write a `CLAUDE.md` (raw/wiki/Output 3-layer rules) in `07_/08_`
-7. **CLI tools**: `pip install graphifyy`, `npm i -g @tobilu/qmd`, NotebookLM via `nlm` (optional)
+7. **CLI tools** (optional): macOS/Linux `pip install graphifyy` · Windows `py -m pip install graphifyy`; then `npm i -g @tobilu/qmd` (all OS). NotebookLM via `nlm` (optional). `.obsidian/` is a hidden folder inside your vault — reveal it (macOS `⌘⇧.` / Windows Explorer "Hidden items" / Linux `Ctrl+H`) to copy settings.
 8. **Claude Code skills**: `/wiki-ingest`·`/wiki-query`·`/wiki-lint`·`/graphify` (share the skills folder or run `graphify install`)
 9. **First cycle**: clip 1 item with the web clipper → `/wiki-ingest` → ask a question with `/wiki-query` → check the graph with `/graphify`
 

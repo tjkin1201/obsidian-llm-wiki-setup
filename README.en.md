@@ -58,11 +58,18 @@ Settings → Appearance → Themes → install **Blue Topaz**. Put the 2 css fil
 Follow the "Replication checklist" in [`GUIDE.en.md`](./GUIDE.en.md) — 9 steps (folders → LLM Wiki CLAUDE.md → CLI tools → first cycle).
 
 ### 6) CLI tools (optional, for the AI workflow)
+
+**macOS / Linux**
 ```bash
-pip install graphifyy          # knowledge-graph visualization
+pip install graphifyy          # (or pip3) knowledge-graph visualization
 npm install -g @tobilu/qmd     # local markdown search engine
-# NotebookLM integration via `nlm` (optional)
 ```
+**Windows (PowerShell)**
+```powershell
+py -m pip install graphifyy    # or python -m pip install graphifyy
+npm install -g "@tobilu/qmd"
+```
+> NotebookLM integration via `nlm` (optional, same on all OS).
 
 ## 🔄 The core workflow
 
@@ -77,6 +84,21 @@ npm install -g @tobilu/qmd     # local markdown search engine
 | External access | `obsidian-local-rest-api` + `mcp-tools` | let AI agents read/write the vault |
 
 > Key discipline **Gold In, Gold Out**: only ingest what you noted a *purpose* for. No-intent data is noise.
+
+## 🖥 OS notes (macOS · Windows · Linux)
+
+Obsidian, plugins, themes, and `.obsidian/*.json` are **identical across all three OSes**. Only these differ:
+
+| Item | macOS | Windows | Linux |
+|------|-------|---------|-------|
+| Show `.obsidian/` folder | Finder `⌘⇧.` | Explorer → View → check "Hidden items" | File manager `Ctrl+H` |
+| Run Python | `pip` / `pip3` | `py -m pip` | `pip3` |
+| Copy config | Finder drag or `cp` | Explorer drag or `copy` | file manager drag or `cp` |
+| Terminal | Terminal/iTerm (zsh) | PowerShell | bash/zsh |
+
+- **`.obsidian/` location**: always **inside your vault folder** (`<your-vault>/.obsidian/`), regardless of OS. It's hidden — reveal it as above, then overwrite with this bundle's files.
+- **Easiest path (no CLI)**: install plugins inside Obsidian (step 2) + copy settings via file manager (step 3). The CLI tools (graphify, qmd) are **optional**, only for AI automation.
+- For `obsidian-git` on Windows, install Git for Windows (https://git-scm.com). macOS: Xcode CLT. Linux: `apt/dnf install git`.
 
 ## 🐙 Push to GitHub (already done here)
 

@@ -58,14 +58,36 @@ https://obsidian.md
 `GUIDE.md`의 "복제 체크리스트" 9단계를 따라가세요. (폴더 생성 → LLM Wiki CLAUDE.md → CLI 도구 → 첫 사이클)
 
 ### 6) CLI 도구 (선택, AI 워크플로우용)
+
+**macOS / Linux**
 ```bash
-pip install graphifyy          # 지식 그래프 시각화
+pip install graphifyy          # (또는 pip3) 지식 그래프 시각화
 npm install -g @tobilu/qmd     # 로컬 마크다운 검색엔진
-# NotebookLM 연동은 nlm (선택)
 ```
+**Windows (PowerShell)**
+```powershell
+py -m pip install graphifyy    # 또는 python -m pip install graphifyy
+npm install -g "@tobilu/qmd"
+```
+> NotebookLM 연동은 `nlm` (선택, 모든 OS 동일).
 
 ## 📖 자세한 설명
 → `GUIDE.md` 참조 (플러그인 32개 카테고리별 용도, 수집→정리→질의→점검→시각화 워크플로우, Gold In Gold Out 규율).
+
+## 🖥 OS별 참고 (macOS · Windows · Linux)
+
+Obsidian·플러그인·테마·`.obsidian/*.json`은 **3개 OS 모두 동일**합니다. 차이는 아래뿐:
+
+| 항목 | macOS | Windows | Linux |
+|------|-------|---------|-------|
+| `.obsidian/` 폴더 보기 | Finder에서 `⌘⇧.` | 탐색기 → 보기 → "숨긴 항목" 체크 | 파일관리자 `Ctrl+H` |
+| Python 실행 | `pip` / `pip3` | `py -m pip` | `pip3` |
+| 설정 복사 | Finder 드래그 또는 `cp` | 탐색기 드래그 또는 `copy` | 파일관리자 드래그 또는 `cp` |
+| 터미널 | Terminal/iTerm (zsh) | PowerShell | bash/zsh |
+
+- **`.obsidian/` 위치**: OS 무관하게 **vault 폴더 안**에 있습니다(`<내vault>/.obsidian/`). 숨김 폴더라 위 방법으로 표시 후 이 번들의 파일을 덮어쓰면 됩니다.
+- **권장(가장 쉬움)**: CLI 없이 → Obsidian 안에서 플러그인을 직접 설치(2단계) + 설정만 파일관리자로 복사(3단계). CLI 도구(graphify·qmd)는 **선택**이며 AI 자동화를 원할 때만.
+- Windows에서 `obsidian-git` 사용 시 Git for Windows(https://git-scm.com) 설치 필요. macOS는 Xcode CLT, Linux는 `apt/dnf install git`.
 
 ## 🐙 GitHub에 올리기
 

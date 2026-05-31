@@ -144,7 +144,7 @@ Obsidian 밖 CLI 도구 + 플러그인이 함께 돈다:
 4. **테마** Blue Topaz 설치 + CSS 스니펫 2개 적용
 5. **핵심 설정** E대로 (첨부 폴더·새 노트 위치·검색 제외)
 6. **LLM Wiki 스키마**: `07_/08_`에 `CLAUDE.md`(raw/wiki/Output 3계층 규칙) 작성 — [[L007_AI_3Layer_Workflow_초보자_가이드]] 참조
-7. **CLI 도구**: `pip install graphifyy`, `npm i -g @tobilu/qmd`, NotebookLM은 `nlm` (선택)
+7. **CLI 도구** (선택): macOS/Linux `pip install graphifyy` · Windows `py -m pip install graphifyy`; 이후 `npm i -g @tobilu/qmd`(공통). NotebookLM은 `nlm`(선택). `.obsidian/`는 vault 안 숨김 폴더 — 표시(macOS `⌘⇧.` / Windows 탐색기 "숨긴 항목" / Linux `Ctrl+H`) 후 설정 복사.
 8. **Claude Code 스킬**: `/wiki-ingest`·`/wiki-query`·`/wiki-lint`·`/graphify` (스킬 폴더 공유 또는 graphify install)
 9. **첫 사이클**: 웹 클리퍼로 1건 수집 → `/wiki-ingest` → `/wiki-query`로 질문 → `/graphify`로 그래프 확인
 
