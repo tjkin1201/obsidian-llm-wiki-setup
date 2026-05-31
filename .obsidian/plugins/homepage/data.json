@@ -1,0 +1,26 @@
+{
+  "version": 4,
+  "homepages": {
+    "Main Homepage": {
+      "value": "08_Hub/🏠 Home",
+      "kind": "File",
+      "openOnStartup": true,
+      "openMode": "Replace all open notes",
+      "manualOpenMode": "Replace all open notes",
+      "view": "Default view",
+      "revertView": true,
+      "openWhenEmpty": true,
+      "refreshDataview": true,
+      "autoCreate": false,
+      "autoScroll": false,
+      "pin": false,
+      "commands": [],
+      "alwaysApply": false,
+      "hideReleaseNotes": false
+    }
+  },
+  "defaultHomepage": "Main Homepage",
+  "showAlternateRibbonIcon": true,
+  "useWhenEmpty": true,
+  "separateMobile": false
+}

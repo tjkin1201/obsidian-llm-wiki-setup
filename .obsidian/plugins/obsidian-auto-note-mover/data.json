@@ -1,0 +1,70 @@
+{
+  "trigger_auto_manual": "Automatic",
+  "use_regex_to_check_for_tags": true,
+  "statusBar_trigger_indicator": true,
+  "folder_tag_pattern": [
+    {
+      "folder": "01_Daily/Insights",
+      "tag": "#insight"
+    },
+    {
+      "folder": "01_Daily/Insights",
+      "tag": "#atomic"
+    },
+    {
+      "folder": "01_Daily/Trends",
+      "tag": "#trend"
+    },
+    {
+      "folder": "00_Meta/Actions",
+      "tag": "#action"
+    },
+    {
+      "folder": "05_Resources/Evolution",
+      "tag": "#evolution-tracker"
+    },
+    {
+      "folder": "02_Work",
+      "tag": "#업무"
+    },
+    {
+      "folder": "02_Work",
+      "tag": "#Work"
+    },
+    {
+      "folder": "04_Creation",
+      "tag": "#창작"
+    },
+    {
+      "folder": "04_Creation",
+      "tag": "#Creation"
+    },
+    {
+      "folder": "03_Learning",
+      "tag": "#공부"
+    },
+    {
+      "folder": "03_Learning",
+      "tag": "#Learning"
+    },
+    {
+      "folder": "05_Resources",
+      "tag": "#자료"
+    },
+    {
+      "folder": "05_Resources",
+      "tag": "#Resources"
+    }
+  ],
+  "use_regex_to_check_for_excluded_folder": true,
+  "excluded_folder": [
+    {
+      "folder": "00_Meta/Templates"
+    },
+    {
+      "folder": "files"
+    }
+  ],
+  "trigger": "Strict",
+  "use_regular_expressions": false
+}

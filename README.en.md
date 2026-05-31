@@ -7,34 +7,39 @@
 > The image above is the 08_Hub LLM Wiki built with this setup, rendered by **graphify** (96 nodes · 7 communities). Colors = communities (topic clusters), lines = links between notes. An example of what this setup produces.
 
 Replicate this Obsidian setup: Karpathy's **LLM Wiki pattern** + PARA folders + Claude Code integration.
-**All secrets (API keys, tokens, personal workspace) are removed.** Safe to share.
+Includes the **plugin list + core/theme settings + per-plugin settings for 18 plugins + templates + LLM Wiki schema** → roughly **95% identical** replication. **Only API keys, certs, and personal data are removed** (each user adds their own keys).
 
 ## 📦 What's inside
 
 ```
 obsidian-llm-wiki-setup/
-├── README.md / README.en.md   # this guide (KO / EN)
-├── GUIDE.md / GUIDE.en.md      # full setup guide (folders, plugins, workflow, checklist) — KO / EN
-├── plugins.txt                 # 31 community plugin IDs (one per line)
+├── README.md / README.en.md       # intro (KO / EN)
+├── GUIDE.md / GUIDE.en.md         # full setup guide (KO / EN)
+├── plugins.txt                    # 31 community plugin IDs
+├── LLM-Wiki-CLAUDE.example.md     # LLM Wiki schema example (the 07/08 CLAUDE.md)
+├── templates/                     # 3 Templater templates (daily/research/trend)
+├── assets/graph-08hub.svg         # knowledge-graph preview
 └── .obsidian/
-    ├── community-plugins.json  # enabled community plugins
-    ├── core-plugins.json       # core plugin on/off
-    ├── appearance.json         # theme (Blue Topaz) + CSS snippets
-    ├── app.json                # editor/file core settings
-    ├── daily-notes.json        # daily note config
-    ├── types.json              # property types
-    └── snippets/               # 2 CSS snippets
+    ├── community-plugins.json     # enabled community plugins
+    ├── core-plugins.json          # core plugin on/off
+    ├── appearance.json            # theme (Blue Topaz) + CSS snippets
+    ├── app.json · daily-notes.json · types.json   # core settings
+    ├── snippets/                  # 2 CSS snippets
+    └── plugins/<18>/data.json     # per-plugin settings (secret-free only)
 ```
 
-## 🚫 Intentionally excluded (secrets / personal)
+Per-plugin settings included (18): dataview · tasks · linter · templater · auto-note-mover · icon-folder · calendar · admonition · minimal-settings · canvas-mindmap · omnisearch · excalidraw · terminal · open-in-terminal · homepage · table-editor · smart-connections · brat
 
-| Excluded | Reason |
-|---|---|
-| `plugins/*/data.json` | may contain **API keys / tokens** (local-rest-api, mcp-tools, copilot, gemini, hermes) |
-| `workspace.json` / `workspace-mobile.json` | personal window layout & open file paths |
-| `hermes/`, `bookmarks.json`, `graph.json` | personal data, bookmarks, graph coordinates |
+## 🚫 Intentionally excluded (secrets / personal) — only 5
 
-→ After installing plugins, each user configures **their own keys**.
+| Excluded | Reason | Your action |
+|---|---|---|
+| `gemini-assistant` · `obsidian-local-rest-api` · `copilot` data.json | **real API keys / certs** | add your own keys |
+| `obsidian42-brat` included but PAT blanked | GitHub token emptied | add PAT if needed |
+| `hermes-console` · `cc-obsidian` data.json | personal session/chat data | (optional plugins) |
+| `workspace*.json` · `graph.json` · `bookmarks.json` · `hermes/` | personal layout/coords/bookmarks | auto-generated |
+
+→ Most settings are **already included**; you only add your own keys to the 3 AI plugins above.
 
 ## 🛠 Installation
 

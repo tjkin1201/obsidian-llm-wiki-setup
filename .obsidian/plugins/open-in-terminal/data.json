@@ -1,0 +1,14 @@
+{
+  "terminalApp": {
+    "macos": "Terminal"
+  },
+  "enableClaude": true,
+  "enableCodex": true,
+  "enableCursor": false,
+  "enableGemini": true,
+  "enableOpencode": false,
+  "enableWslOnWindows": false,
+  "enableGitCommitPush": true,
+  "enableGitPull": true,
+  "defaultCommitMessage": "update"
+}

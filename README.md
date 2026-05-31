@@ -7,34 +7,39 @@
 > 위 그림은 이 셋업으로 만든 08_Hub LLM Wiki를 **graphify**로 그린 지식 그래프 (96개 노드 · 7개 커뮤니티). 색은 커뮤니티(주제 군집), 선은 노트 간 연결. 이 셋업이 만들어내는 결과물의 예시다.
 
 Karpathy **LLM Wiki 패턴** + PARA 폴더 + Claude Code 연동 Obsidian 셋업을 그대로 복제하는 번들입니다.
-**비밀(API 키·토큰·개인 워크스페이스)은 모두 제외**했습니다. 안전하게 공유 가능합니다.
+**플러그인 목록 + 코어/테마 설정 + 18개 플러그인의 세부 설정 + 템플릿 + LLM Wiki 스키마**까지 포함해 **약 95% 동일** 재현이 됩니다. **API 키·인증서·개인 데이터만 제외**(받는 사람이 자기 키 입력).
 
 ## 📦 번들 내용
 
 ```
 obsidian-llm-wiki-bundle/
-├── README.md                  # 이 파일
-├── GUIDE.md                   # 전체 셋업 가이드 (폴더구조·플러그인·워크플로우·복제 체크리스트)
-├── plugins.txt                # 커뮤니티 플러그인 ID 31개 (한 줄당 1개)
+├── README.md / README.en.md       # 소개 (한/영)
+├── GUIDE.md / GUIDE.en.md         # 전체 셋업 가이드 (한/영)
+├── plugins.txt                    # 커뮤니티 플러그인 ID 31개
+├── LLM-Wiki-CLAUDE.example.md     # LLM Wiki 스키마 예시 (07/08의 CLAUDE.md)
+├── templates/                     # Templater 템플릿 3종 (daily/research/trend)
+├── assets/graph-08hub.svg         # 지식 그래프 미리보기
 └── .obsidian/
-    ├── community-plugins.json # 활성 커뮤니티 플러그인 목록
-    ├── core-plugins.json      # 코어 플러그인 on/off
-    ├── appearance.json        # 테마(Blue Topaz) + CSS 스니펫
-    ├── app.json               # 에디터/파일 핵심 설정
-    ├── daily-notes.json       # 데일리 노트 설정
-    ├── types.json             # 속성 타입
-    └── snippets/              # CSS 스니펫 2종
+    ├── community-plugins.json     # 활성 커뮤니티 플러그인 목록
+    ├── core-plugins.json          # 코어 플러그인 on/off
+    ├── appearance.json            # 테마(Blue Topaz) + CSS 스니펫
+    ├── app.json · daily-notes.json · types.json   # 핵심 설정
+    ├── snippets/                  # CSS 스니펫 2종
+    └── plugins/<18개>/data.json   # 플러그인별 세부 설정 (비밀 없는 것만)
 ```
 
-## 🚫 의도적으로 뺀 것 (비밀·개인정보)
+플러그인 세부 설정 포함분(18): dataview · tasks · linter · templater · auto-note-mover · icon-folder · calendar · admonition · minimal-settings · canvas-mindmap · omnisearch · excalidraw · terminal · open-in-terminal · homepage · table-editor · smart-connections · brat
 
-| 제외 파일 | 이유 |
-|---|---|
-| `plugins/*/data.json` | local-rest-api·mcp-tools·copilot·gemini·hermes 등에 **API 키/토큰** 포함 가능 |
-| `workspace.json` / `workspace-mobile.json` | 개인 창 레이아웃·열어둔 파일 경로 |
-| `hermes/`, `bookmarks.json`, `graph.json` | 개인 데이터·북마크·그래프 좌표 |
+## 🚫 의도적으로 뺀 것 (비밀·개인정보) — 5종만
 
-→ 받는 사람은 플러그인 설치 후 **각자 자기 키로** 설정합니다.
+| 제외 | 이유 | 받는 사람 조치 |
+|---|---|---|
+| `gemini-assistant`·`obsidian-local-rest-api`·`copilot` data.json | **실제 API 키·인증서** 포함 | 각자 자기 키 입력 |
+| `obsidian42-brat`은 포함하되 PAT는 빈값 | GitHub 토큰 비움 | 필요 시 자기 PAT |
+| `hermes-console`·`cc-obsidian` data.json | 개인 세션·대화 데이터 | (선택 플러그인) |
+| `workspace*.json` · `graph.json` · `bookmarks.json` · `hermes/` | 개인 레이아웃·좌표·북마크 | 자동 생성됨 |
+
+→ 즉 **설정의 대부분은 이미 들어있고**, 받는 사람은 위 3개 AI 플러그인에 자기 키만 넣으면 됩니다.
 
 ## 🛠 설치 방법
 

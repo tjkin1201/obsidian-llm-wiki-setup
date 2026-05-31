@@ -1,7 +1,14 @@
 # ─── 비밀·개인정보 보호 (절대 커밋 금지) ───
-# 플러그인별 설정에 API 키·토큰이 들어있을 수 있음
-.obsidian/plugins/*/data.json
-.obsidian/plugins/
+# 비밀/개인 데이터가 든 플러그인 설정만 차단 (안전한 18개 data.json은 포함됨)
+.obsidian/plugins/gemini-assistant/
+.obsidian/plugins/obsidian-local-rest-api/
+.obsidian/plugins/copilot/
+.obsidian/plugins/hermes-console/
+.obsidian/plugins/cc-obsidian/
+# 플러그인 바이너리는 공유 안 함 (각자 스토어에서 설치) — data.json만 공유
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/manifest.json
 # 개인 워크스페이스·레이아웃·열어둔 파일 경로
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
