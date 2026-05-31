@@ -2,6 +2,10 @@
 
 🌏 [한국어](./README.md) · **English**
 
+![LLM Wiki knowledge graph — 08_Hub](./assets/graph-08hub.svg)
+
+> The image above is the 08_Hub LLM Wiki built with this setup, rendered by **graphify** (96 nodes · 7 communities). Colors = communities (topic clusters), lines = links between notes. An example of what this setup produces.
+
 Replicate this Obsidian setup: Karpathy's **LLM Wiki pattern** + PARA folders + Claude Code integration.
 **All secrets (API keys, tokens, personal workspace) are removed.** Safe to share.
 

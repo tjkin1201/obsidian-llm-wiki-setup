@@ -2,6 +2,10 @@
 
 🌏 **한국어** · [English](./README.en.md)
 
+![LLM Wiki 지식 그래프 — 08_Hub](./assets/graph-08hub.svg)
+
+> 위 그림은 이 셋업으로 만든 08_Hub LLM Wiki를 **graphify**로 그린 지식 그래프 (96개 노드 · 7개 커뮤니티). 색은 커뮤니티(주제 군집), 선은 노트 간 연결. 이 셋업이 만들어내는 결과물의 예시다.
+
 Karpathy **LLM Wiki 패턴** + PARA 폴더 + Claude Code 연동 Obsidian 셋업을 그대로 복제하는 번들입니다.
 **비밀(API 키·토큰·개인 워크스페이스)은 모두 제외**했습니다. 안전하게 공유 가능합니다.
 
